@@ -423,6 +423,7 @@ useEffect(() => {
         </div>
       </div>
 
+      
       <div className="fixed bottom-0 left-0 right-0 h-12 bg-[#0b0f16]/95 border-t border-white/5 backdrop-blur flex items-center justify-between px-4">
         <div className="flex items-center gap-2 text-xs text-zinc-400">
           <span className="px-2 py-1 rounded bg-blue-600/20 text-blue-300 border border-blue-500/20">
