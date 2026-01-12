@@ -41,7 +41,6 @@ function getAgeLabel(isoTime) {
   return `${days}d`;
 }
 
-// ✅ LEFT panel: New Streams
 router.get("/new-streams", async (req, res) => {
   try {
     const data = await callBitquery(QUERY_NEW_PUMPFUN_TOKENS);
@@ -71,7 +70,7 @@ router.get("/new-streams", async (req, res) => {
   }
 });
 
-// ✅ RIGHT panel: Top Stream Tokens (real) using 5min marketcap change
+
 router.get("/top-stream-tokens", async (req, res) => {
   try {
     const data = await callBitquery(QUERY_TOP_PUMPFUN_TOKENS_5MIN);

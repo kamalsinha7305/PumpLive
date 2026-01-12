@@ -1,6 +1,6 @@
-// src/api/bitqueryClient.js
 
-const API_BASE = "http://localhost:5000"; // your backend port
+
+const API_BASE = "http://localhost:5000"; 
 
 export async function getNewStreams() {
   const res = await fetch(`${API_BASE}/api/bitquery/new-streams`);

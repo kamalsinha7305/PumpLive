@@ -14,14 +14,7 @@ import {
   Copy,
 } from "lucide-react";
 
-/**
- * ✅ Pump Live UI + Backend Integration
- * Backend endpoints expected:
- * 1) GET http://localhost:5000/api/bitquery/new-streams
- * 2) GET http://localhost:5000/api/bitquery/top-stream-tokens
- */
 
-// ---------- Static UI lists ----------
 const NAV_ITEMS = [
   "Discover",
   "Pulse",
@@ -140,17 +133,17 @@ const Row = ({ left, mid, right }) => (
   </div>
 );
 
-// ---------- Main Page ----------
+
 function PumpLive() {
-  // ✅ backend driven data
+
   const [newStreams, setNewStreams] = useState([]);
   const [topStreamTokens, setTopStreamTokens] = useState([]);
 
-  // ✅ UI states
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // ✅ Backend base URL
+
   const API_BASE = "http://localhost:5000";
 
 const fetchAll = async () => {
@@ -188,10 +181,10 @@ useEffect(() => {
 
   return (
     <div className="min-h-screen bg-[#0b0f16] text-white">
-      {/* Top Navbar */}
+      
       <header className="h-16 flex items-center justify-between px-6 border-b border-white/5 bg-[#0b0f16]/90 backdrop-blur">
         <div className="flex items-center gap-6">
-          {/* Brand */}
+          
           <div className="flex items-center gap-3">
             <div className="h-7 w-7 rounded-md bg-white/10 flex items-center justify-center font-black">
               ▲
@@ -201,7 +194,6 @@ useEffect(() => {
             </div>
           </div>
 
-          {/* Nav */}
           <nav className="hidden lg:flex items-center gap-5 text-sm">
             {NAV_ITEMS.map((item) => (
               <a
@@ -217,7 +209,7 @@ useEffect(() => {
           </nav>
         </div>
 
-        {/* Right tools */}
+    
         <div className="flex items-center gap-3">
           <div className="hidden md:flex items-center gap-2 bg-white/5 border border-white/5 rounded-full px-3 h-10 w-[360px]">
             <Search className="h-4 w-4 text-zinc-400" />
@@ -249,9 +241,9 @@ useEffect(() => {
         </div>
       </header>
 
-      {/* Content */}
+  
       <div className="px-6 py-5">
-        {/* status messages */}
+      
         {loading && (
           <div className="mb-3 text-sm text-zinc-400">
             Loading live data...
@@ -264,7 +256,7 @@ useEffect(() => {
           </div>
         )}
 
-        {/* Sub tabs */}
+       
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-6 text-sm text-zinc-400">
             {FILTER_TABS.map((t) => (
@@ -282,7 +274,7 @@ useEffect(() => {
             ))}
           </div>
 
-          {/* Right mini controls */}
+  
           <div className="hidden lg:flex items-center gap-2">
             <button className="h-9 w-9 rounded-full bg-white/5 border border-white/5 hover:bg-white/10 transition flex items-center justify-center">
               <Settings className="h-4 w-4 text-zinc-300" />
@@ -307,9 +299,9 @@ useEffect(() => {
           </div>
         </div>
 
-        {/* Two columns */}
+     
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-          {/* Left panel */}
+    
           <Panel
             title="New Streams"
             rightSlot={
@@ -374,7 +366,7 @@ useEffect(() => {
             </div>
           </Panel>
 
-          {/* Right panel */}
+         
           <Panel
             title="Top Stream Tokens"
             rightSlot={
