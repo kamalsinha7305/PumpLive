@@ -28,7 +28,7 @@ const NAV_ITEMS = [
 
 const FILTER_TABS = ["Top", "Trending", "Surge", "DEX Screener", "Pump Live"];
 
-// ---------- Small UI helpers ----------
+
 const PillAvatar = () => (
   <div className="h-16 w-20 rounded-xl bg-gradient-to-br from-black via-zinc-900 to-black flex items-center justify-center">
     <div className="h-10 w-14 rounded-full bg-gradient-to-r from-emerald-400 to-teal-200 rotate-[-25deg] shadow-[0_0_18px_rgba(52,211,153,0.25)] relative">
@@ -423,7 +423,6 @@ useEffect(() => {
         </div>
       </div>
 
-      {/* Footer bar */}
       <div className="fixed bottom-0 left-0 right-0 h-12 bg-[#0b0f16]/95 border-t border-white/5 backdrop-blur flex items-center justify-between px-4">
         <div className="flex items-center gap-2 text-xs text-zinc-400">
           <span className="px-2 py-1 rounded bg-blue-600/20 text-blue-300 border border-blue-500/20">
